@@ -1,0 +1,64 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- Invocación de Bootstrap -->
+    <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <!-- /Invocación de Bootstrap -->
+
+    <!-- Invocación de Jquery JavaScript -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="{% static 'js/funciones.js' %}"></script>
+    <!-- / Invocación de Jquery JavaScript -->
+
+    <title>Actividad 2 - Desarrollo Web</title>
+</head>
+<body>
+    <header>
+        <nav class="navbar fixed-top navbar-expand-lg navbar-dark">
+            <div class="container">
+                <img class="navbar-brand" src="{%  static 'img/logo.png' %}" alt="Logo" height="40px">
+                <h1 class="navbar-brand">Web Development School</h1>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                  <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                  <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                      <a class="nav-link active" aria-current="page" href="{% url 'home:home' %}">Home</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="{% url 'home:estudiantesapp' %}">Estudiantes</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="{% url 'home:adminsapp' %}">Administradores</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="{% url 'home:acercaapp' %}">Acerca de</a>
+                    </li>
+                  </ul>
+                  <a href="https://umg.edu.gt/miumg/" target="_blank">
+                      <img class="d-flex" src="{% static 'img/umg_logo.png' %}" alt="Logotipo Universidad Mariano Gálvez" height="40px">
+                  </a>
+              </div>
+            </div>
+          </nav>
+    </header>
+
+    {% block main %}
+    {% endblock %}
+
+    <footer class="d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top text-bg-dark">
+        <p class="col-md-4 mb-0 text-muted">Página elaborada por <strong>Ramiro López 0903-18-15570</strong></p>
+    </footer>
+
+    <!-- Script para procesado de animaciones bootstrap -->
+    <script src="{% static 'js/bootstrap.bundle.min.js' %}"></script>
+    <!-- Cierre de Script para procesado de animaciones bootstrap -->
+</body>
+</html>
