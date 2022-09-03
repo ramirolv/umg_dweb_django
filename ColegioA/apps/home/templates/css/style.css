@@ -1,0 +1,106 @@
+.navbar{
+    background:  linear-gradient(90deg, #051336, #0E315B, #24385B, #98CC3E);
+}
+
+main{
+    margin-top: 57px;
+}
+main .carousel-inner img, main .carousel-inner object{
+    max-height: 70vh;
+    object-fit: cover;
+    border-radius: 45px;
+}
+
+.img-icon-grid{
+    max-width: 30%;
+    object-fit: cover;
+    border-radius: 45px;
+}
+
+body{
+    background-color: rgb(14, 49, 91);
+}
+
+.profile-image{
+    border-radius: 45px;
+}
+
+object{
+    width: 100%;
+    height: 400px;
+}
+
+.input-group-text{
+    background-color: #198754;
+    color: white;
+}
+
+.input-group{
+    border: 2px solid #198754;
+    border-radius: 9px;
+}
+/*
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    font-family: 'Edu NSW ACT Foundation', cursive;
+    font-family: 'Roboto', sans-serif;
+    background: rgb(18, 31, 61);
+    color: white;
+}
+
+nav{
+    padding: 15px;
+    background: rgb(5, 19, 54);
+    border-bottom: 3px solid #381052;
+}
+
+.nav-item{
+    padding: 4px 1%;
+    font-size: 150%;
+    text-decoration: none;
+    color: rgb(152, 204, 62);
+    font-weight: 700;
+}
+
+.nav-item:hover{
+    background-color: #0E315B;
+    border-radius: 5px;
+}
+
+main{
+    background-color: rgb(32, 53, 88);
+    margin: 20px 10%;
+    padding: 20px;
+    border-radius: 20px;
+}
+
+.main-div{
+    background-color: rgb(32, 53, 88);
+}
+
+.img-main{
+    width: 90%;
+}
+
+.img-logo{
+    float: right;
+    align-self: flex-end;
+    height: 75px;
+    border-radius: 45px;
+}
+
+
+td{
+    padding: 0px 10px;
+}
+
+
+h1,h2,h3,h4,h5, h6{
+    color: #32AFF6;
+}
+
+*/

@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/bootstrap.min.css">
+    <link rel="stylesheet" href="./css/style.css">
+
+    <!-- Invocación de Jquery JavaScript -->
+    <script src="https://code.jquery.com/jquery.js"></script>
+    <script src="./js/funciones.js"></script>
+    <!-- / Invocación de Jquery JavaScript -->
+
+    <title>Actividad 2 - Desarrollo Web</title>
+</head>
+<body>
+    <header>
+        <nav class="navbar fixed-top navbar-expand-lg navbar-dark">
+            <div class="container">
+              <img class="navbar-brand" src="./img/logo.png" alt="Logo" height="40px">
+              <h1 class="navbar-brand">Web Development School</h1>
+              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+              <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                  <li class="nav-item">
+                    <a class="nav-link" aria-current="page" href="{% url 'home:home' %}">Home</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="{% url 'home:estudiantesapp' %}">Estudiantes</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link active" href="#">Administradores</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="{% url 'home:acercaapp' %}">Acerca de</a>
+                  </li>
+                </ul>
+                <img class="d-flex" src="./img/umg_logo.png" alt="Logotipo Universidad Mariano Gálvez" height="40px">
+              </div>
+            </div>
+          </nav>
+    </header>
+
+    <main class="text-white">
+      <div class="container">
+        <div class="px-4 py-5 my-5 text-center">
+          <h1 class="display-5 fw-bold">Listado de administradores</h1>
+          <div class="col-lg-6 mx-auto">
+            <p class="lead mb-4">Aquí encontrarás el listado de administradores de la institución educativa.</p>
+            <div class="d-grid gap-2 d-sm-flex justify-content-sm-center">
+              <table id="dataTable" class="table text-white">
+                  <tr>
+                      <td>No</td>
+                      <td>Perfil</td>
+                      <td>Nombre</td>
+                      <td>Puesto</td>
+                  </tr>
+                  <tr>
+                      <td>1</td>
+                      <td><img src="https://cdn-icons-png.flaticon.com/128/1177/1177568.png" alt="Profile Icon" width="30px" height="30px"></td>
+                      <td>Chuck Norris</td>
+                      <td>Director</td>
+                  </tr>
+                  <tr>
+                      <td>2</td>
+                      <td><img src="https://cdn-icons-png.flaticon.com/128/1177/1177568.png" alt="Profile Icon" width="30px" height="30px"></td>
+                      <td>Arnold Schwarzenegger</td>
+                      <td>Sub-Director</td>
+                  </tr>
+                  <tr>
+                      <td>3</td>
+                      <td><img src="https://cdn-icons-png.flaticon.com/128/1177/1177568.png" alt="Profile Icon" width="30px" height="30px"></td>
+                      <td>Jackie Chan</td>
+                      <td>Secretario</td>
+                  </tr>
+                  <tr>
+                      <td>4</td>
+                      <td><img src="https://cdn-icons-png.flaticon.com/128/1177/1177568.png" alt="Profile Icon" width="30px" height="30px"></td>
+                      <td>Brus Lee</td>
+                      <td>Mantenimiento</td>
+                  </tr>
+                  <tr>
+                      <td>5</td>
+                      <td><img src="https://cdn-icons-png.flaticon.com/128/1177/1177568.png" alt="Profile Icon" width="30px" height="30px"></td>
+                      <td>Chum Lee</td>
+                      <td>Secretaria</td>
+                  </tr>
+              </table>
+            </div>
+            <form class="row g-3 needs-validation" novalidate>
+              <button id="btnAgregar" type="button" class="col btn btn-success">Agregar</button>
+              <button id="btnGuardar" type="button" class="col btn btn-success col-5" style="display: none;">Guardar</button>
+              <button id="btnListar" type="button" class="col btn btn-primary offset-2 col-5" style="display: none;">Listar</button>
+              
+              
+              <div id="inputsData" style="display: none;">
+                <div class="input-group mb-3">
+                  <span class="input-group-text" id="basic-addon1">Perfil</span>
+                  <input id="inputPicture" type="text" class="form-control" placeholder="Link de imagen de perfil" aria-label="Username" aria-describedby="basic-addon1" required>
+                </div> 
+                <div class="input-group mb-3">
+                  <span class="input-group-text" id="basic-addon2">Nombre</span>
+                  <input id="inputName" type="text" class="form-control" placeholder="Escribe el nombre" aria-label="Username" aria-describedby="basic-addon2" required>
+                  <span class="input-group-text" id="basic-addon3">Puesto</span>
+                  <input id="inputAverage" type="text" class="form-control" placeholder="Escribe el puesto" aria-label="Username" aria-describedby="basic-addon3" required>
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+
+      </div>
+    </main>
+
+    <footer class="d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top text-bg-dark">
+        <p class="col-md-4 mb-0 text-muted">Página elaborada por <strong>Ramiro López 0903-18-15570</strong></p>
+    </footer>
+    
+    <!-- Script para procesado de animaciones bootstrap -->
+    <script src="./js/bootstrap.bundle.min.js"></script>
+    <!-- Cierre de Script para procesado de animaciones bootstrap -->
+</body>
+</html>
