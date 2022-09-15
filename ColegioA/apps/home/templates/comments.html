@@ -1,0 +1,167 @@
+{% extends 'base.html' %}
+
+{% block main %}
+    
+    <main class="text-white">
+      
+      <div class="container">
+        <div class="px-4 py-5 my-5 text-center">
+          <h1 class="display-5 fw-bold">Comentarios de Estudiantes</h1>
+          <div class="col-lg-6 mx-auto">
+            <p class="lead mb-4">En este apartado encontrará los comentarios realizados a las publicaciones hechas por estudiantes del curso de Desarrollo Web de la Universidad Mariano Gálvez, sede San Pedro, San Marcos.</p>
+            
+            <form class="row g-3 needs-validation" novalidate>
+              <button id="btnAgregar" type="button" class="col btn btn-success">Agregar</button>
+              <button id="btnGuardar" type="button" class="col btn btn-success col-5" style="display: none;">Guardar</button>
+              <button id="btnListar" type="button" class="col btn btn-primary offset-2 col-5" style="display: none;">Listar</button>
+              
+              
+              <div id="inputsData" style="display: none;">
+                <div class="input-group mb-3">
+                  <span class="input-group-text" id="basic-addon1">Perfil</span>
+                  <input id="inputPicture" type="text" class="form-control" placeholder="Link de imagen de perfil" aria-label="Username" aria-describedby="basic-addon1" required>
+                </div> 
+                <div class="input-group mb-3 col-md-4">
+                  <span class="input-group-text" id="basic-addon2">Nombre</span>
+                  <input id="inputName" type="text" class="form-control" placeholder="Escribe el nombre" aria-label="Username" aria-describedby="basic-addon2" required>
+                  <span class="input-group-text" id="basic-addon3">Promedio</span>
+                  <input id="inputAverage" type="number" min="0" max="100" class="form-control" placeholder="Escribe el promedio" aria-label="Username" aria-describedby="basic-addon3" required>
+                </div>
+              </div>
+            </form>
+
+            <div class="d-grid gap-2 d-sm-flex justify-content-sm-center mt-5 text-dark">
+              <div class="card">
+                <h5 class="card-header">Calamardo Tentáculos</h5>
+                <p class="card-text"><small class="text-muted">Publicada 12/09/2022 15:30</small></p>
+                <img src="https://p4.wallpaperbetter.com/wallpaper/414/654/483/fish-ocean-sea-sealife-wallpaper-preview.jpg" class="card-img-top" alt="...">
+                <div class="card-body">
+                  <h5 class="card-title">Vida en el fondo del mar</h5>
+                  <p class="card-text">Las maravillas del fondo marino se hacen ver a través del estudio de los oceanos</p>
+                </div>
+                <ul class="list-group list-group-flush text-start">
+
+                  <li class="list-group-item small">
+                    <div class="card mb-3 border border-primary" style="max-width: 540px;">
+                      <div class="row g-0">
+                        <div class="col-md-2">
+                          <img src="https://pm1.narvii.com/6192/8d48b363926a12d577100ba2e5ef945c6327441b_128.jpg" class="img-fluid border border-success rounded-circle" alt="...">
+                        </div>
+                        <div class="col-md-8">
+                          <div class="card-body">
+                            <h5 class="card-title">Bob Sponja</h5>
+                            <p class="card-text">Es muy emocionante vivir en el fondo del mar 🤗🤩.</p>
+                            <p class="card-text"><small class="text-muted">12/09/2022 18:30</small></p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </li>
+                  <li class="list-group-item small">
+                    <div class="card mb-3 border border-primary" style="max-width: 540px;">
+                      <div class="row g-0">
+                        <div class="col-md-2">
+                          <img src="https://pm1.narvii.com/6192/8d48b363926a12d577100ba2e5ef945c6327441b_128.jpg" class="img-fluid border border-success rounded-circle" alt="...">
+                        </div>
+                        <div class="col-md-8">
+                          <div class="card-body">
+                            <h5 class="card-title">Bob Sponja</h5>
+                            <p class="card-text">Es muy emocionante vivir en el fondo del mar 🤗🤩.</p>
+                            <p class="card-text"><small class="text-muted">12/09/2022 18:30</small></p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </li>
+                  <li class="list-group-item small">
+                    <div class="card mb-3 border border-primary" style="max-width: 540px;">
+                      <div class="row g-0">
+                        <div class="col-md-2">
+                          <img src="https://pm1.narvii.com/6192/8d48b363926a12d577100ba2e5ef945c6327441b_128.jpg" class="img-fluid border border-success rounded-circle" alt="...">
+                        </div>
+                        <div class="col-md-8">
+                          <div class="card-body">
+                            <h5 class="card-title">Bob Sponja</h5>
+                            <p class="card-text">Es muy emocionante vivir en el fondo del mar 🤗🤩.</p>
+                            <p class="card-text"><small class="text-muted">12/09/2022 18:30</small></p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </li>
+
+                </ul>              
+              </div>
+            </div>
+            <div class="d-grid gap-2 d-sm-flex justify-content-sm-center mt-5 text-dark">
+              <div class="card">
+                <h5 class="card-header">Calamardo Tentáculos</h5>
+                <p class="card-text"><small class="text-muted">Publicada 12/09/2022 15:30</small></p>
+                <img src="https://p4.wallpaperbetter.com/wallpaper/414/654/483/fish-ocean-sea-sealife-wallpaper-preview.jpg" class="card-img-top" alt="...">
+                <div class="card-body">
+                  <h5 class="card-title">Vida en el fondo del mar</h5>
+                  <p class="card-text">Las maravillas del fondo marino se hacen ver a través del estudio de los oceanos</p>
+                </div>
+                <ul class="list-group list-group-flush text-start">
+
+                  <li class="list-group-item small">
+                    <div class="card mb-3 border border-primary" style="max-width: 540px;">
+                      <div class="row g-0">
+                        <div class="col-md-2">
+                          <img src="https://pm1.narvii.com/6192/8d48b363926a12d577100ba2e5ef945c6327441b_128.jpg" class="img-fluid border border-success rounded-circle" alt="...">
+                        </div>
+                        <div class="col-md-8">
+                          <div class="card-body">
+                            <h5 class="card-title">Bob Sponja</h5>
+                            <p class="card-text">Es muy emocionante vivir en el fondo del mar 🤗🤩.</p>
+                            <p class="card-text"><small class="text-muted">12/09/2022 18:30</small></p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </li>
+                  <li class="list-group-item small">
+                    <div class="card mb-3 border border-primary" style="max-width: 540px;">
+                      <div class="row g-0">
+                        <div class="col-md-2">
+                          <img src="https://pm1.narvii.com/6192/8d48b363926a12d577100ba2e5ef945c6327441b_128.jpg" class="img-fluid border border-success rounded-circle" alt="...">
+                        </div>
+                        <div class="col-md-8">
+                          <div class="card-body">
+                            <h5 class="card-title">Bob Sponja</h5>
+                            <p class="card-text">Es muy emocionante vivir en el fondo del mar 🤗🤩.</p>
+                            <p class="card-text"><small class="text-muted">12/09/2022 18:30</small></p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </li>
+                  <li class="list-group-item small">
+                    <div class="card mb-3 border border-primary" style="max-width: 540px;">
+                      <div class="row g-0">
+                        <div class="col-md-2">
+                          <img src="https://pm1.narvii.com/6192/8d48b363926a12d577100ba2e5ef945c6327441b_128.jpg" class="img-fluid border border-success rounded-circle" alt="...">
+                        </div>
+                        <div class="col-md-8">
+                          <div class="card-body">
+                            <h5 class="card-title">Bob Sponja</h5>
+                            <p class="card-text">Es muy emocionante vivir en el fondo del mar 🤗🤩.</p>
+                            <p class="card-text"><small class="text-muted">12/09/2022 18:30</small></p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </li>
+
+                </ul>              
+              </div>
+            </div>
+
+
+          </div>
+        </div>
+
+      </div>
+    </main>
+
+{% endblock %}

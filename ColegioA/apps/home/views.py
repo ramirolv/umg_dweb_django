@@ -11,5 +11,11 @@ class EstudiantesView(TemplateView):
 class AdministradoresView(TemplateView):
     template_name='admins.html'
 
+class PublicacionesView(TemplateView):
+    template_name='publications.html'
+
+class ComentariosView(TemplateView):
+    template_name='comments.html'
+
 class AcercaView(TemplateView):
     template_name='about.html'

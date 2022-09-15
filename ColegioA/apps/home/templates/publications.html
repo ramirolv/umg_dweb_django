@@ -1,0 +1,65 @@
+{% extends 'base.html' %}
+
+{% block main %}
+    
+    <main class="text-white">
+      
+      <div class="container">
+        <div class="px-4 py-5 my-5 text-center">
+          <h1 class="display-5 fw-bold">Publicaciones de Estudiantes</h1>
+          <div class="col-lg-6 mx-auto">
+            <p class="lead mb-4">En este apartado encontrará las publicaciones hechas por estudiantes del curso de Desarrollo Web de la Universidad Mariano Gálvez, sede San Pedro, San Marcos.</p>
+            <form class="row g-3 needs-validation" novalidate>
+              <button id="btnAgregar" type="button" class="col btn btn-success">Agregar</button>
+              <button id="btnGuardar" type="button" class="col btn btn-success col-5" style="display: none;">Guardar</button>
+              <button id="btnListar" type="button" class="col btn btn-primary offset-2 col-5" style="display: none;">Listar</button>
+              
+              
+              <div id="inputsData" style="display: none;">
+                <div class="input-group mb-3">
+                  <span class="input-group-text" id="basic-addon1">Perfil</span>
+                  <input id="inputPicture" type="text" class="form-control" placeholder="Link de imagen de perfil" aria-label="Username" aria-describedby="basic-addon1" required>
+                </div> 
+                <div class="input-group mb-3 col-md-4">
+                  <span class="input-group-text" id="basic-addon2">Nombre</span>
+                  <input id="inputName" type="text" class="form-control" placeholder="Escribe el nombre" aria-label="Username" aria-describedby="basic-addon2" required>
+                  <span class="input-group-text" id="basic-addon3">Promedio</span>
+                  <input id="inputAverage" type="number" min="0" max="100" class="form-control" placeholder="Escribe el promedio" aria-label="Username" aria-describedby="basic-addon3" required>
+                </div>
+              </div>
+            </form>
+
+            <div class="d-grid gap-2 d-sm-flex justify-content-sm-center mt-5 text-dark">
+              <div class="card">
+                <h5 class="card-header">Calamardo Tentáculos</h5>
+                <p class="card-text"><small class="text-muted">Publicada 12/09/2022 15:30</small></p>
+                <img src="https://p4.wallpaperbetter.com/wallpaper/414/654/483/fish-ocean-sea-sealife-wallpaper-preview.jpg" class="card-img-top" alt="...">
+                <div class="card-body">
+                  <h5 class="card-title">Vida en el fondo del mar</h5>
+                  <p class="card-text">Las maravillas del fondo marino se hacen ver a través del estudio de los oceanos</p>
+                  <a href="#" class="btn btn-primary">Autorizar</a>
+                </div>
+              </div>
+            </div>
+
+            <div class="d-grid gap-2 d-sm-flex justify-content-sm-center mt-5 text-dark">
+              <div class="card">
+                <h5 class="card-header">Calamardo Tentáculos</h5>
+                <p class="card-text"><small class="text-muted">Publicada 12/09/2022 15:30</small></p>
+                <img src="https://p4.wallpaperbetter.com/wallpaper/414/654/483/fish-ocean-sea-sealife-wallpaper-preview.jpg" class="card-img-top" alt="...">
+                <div class="card-body">
+                  <h5 class="card-title">Vida en el fondo del mar</h5>
+                  <p class="card-text">Las maravillas del fondo marino se hacen ver a través del estudio de los oceanos</p>
+                  <a href="#" class="btn btn-primary">Autorizar</a>
+                </div>
+              </div>
+            </div>
+
+
+          </div>
+        </div>
+
+      </div>
+    </main>
+
+{% endblock %}
