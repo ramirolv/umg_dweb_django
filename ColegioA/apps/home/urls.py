@@ -16,7 +16,7 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path, include
 from apps.home import views
-from .views import HomeView, EstudiantesView, AdministradoresView, PublicacionesView, ComentariosView, AcercaView
+from .views import HomeView, EstudiantesView, AdministradoresView, PublicacionesView, ComentariosView, AcercaView, CrearView
 
 app_name='home'
 
@@ -27,4 +27,5 @@ urlpatterns = [
     path('publicaciones/', PublicacionesView.as_view(), name='publicationsapp'),
     path('comentarios/', ComentariosView.as_view(), name='commentsapp'),
     path('acerca/', AcercaView.as_view(), name='acercaapp'),
+    path('crear/', CrearView.as_view(), name='crear'),
 ]

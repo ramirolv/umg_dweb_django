@@ -1,12 +1,21 @@
 from django.shortcuts import render
-from django.views.generic import TemplateView
+from django.views.generic import TemplateView, CreateView
+from django.http import HttpResponseRedirect
+from django.urls import reverse_lazy
+from .forms import EstudianteForm
+
 
 # Create your views here.
 class HomeView(TemplateView):
     template_name='index.html'
 
-class EstudiantesView(TemplateView):
+class EstudiantesView(CreateView):
     template_name='students.html'
+    form_class = EstudianteForm
+    success_url = reverse_lazy('home:home')
+
+class CrearView(CreateView):
+    template_name = 'crearEstudiante.html'
 
 class AdministradoresView(TemplateView):
     template_name='admins.html'

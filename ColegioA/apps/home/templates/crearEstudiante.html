@@ -1,0 +1,15 @@
+{% extends 'students.html' %}
+
+{% block crearEstudiante %}
+    
+    <main>
+        <h2>Crear Estudiante</h2>
+        <form method="POST">
+            {% csrf_token %}
+            Nombre {{ form.nombre }}
+            Apellido {{ form.apellido }}
+            <input type="submit" class="btn btn-primary" name="Enviar">
+        </form>
+    </main>
+
+{% endblock %}

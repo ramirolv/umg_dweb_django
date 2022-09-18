@@ -68,7 +68,46 @@
               </table>
             </div>
 
+            <div class="container">
+              <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
+                Agregar Estudiante
+              </button>
+              
+              <!-- Modal -->
+              <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered text-dark">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <h5 class="modal-title" id="staticBackdropLabel">Información del estudiante</h5>
+                      <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                      <!--
+                        <a href="{% url 'home:crear' %}" class="btn btn-primary">Crear</a>
+                      -->
+                      <h2>Crear Estudiante</h2>
+                      <form method="POST">
+                          {% csrf_token %}
+                          Nombre {{ form.nombre }}
+                          <br>
+                          Apellido {{ form.apellido }}
+                          <br>
+                          <input type="submit" class="btn btn-primary" name="Enviar">
+                      </form>
+                    </div>
+                    <div class="modal-footer">
+                      <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                      <input type="submit" class="btn btn-primary" name="Enviar">
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+
             <form class="row g-3 needs-validation" novalidate>
+              
+              
               <button id="btnAgregar" type="button" class="col btn btn-success">Agregar</button>
               <button id="btnGuardar" type="button" class="col btn btn-success col-5" style="display: none;">Guardar</button>
               <button id="btnListar" type="button" class="col btn btn-primary offset-2 col-5" style="display: none;">Listar</button>
