@@ -56,3 +56,4 @@ class RegistroForm(UserCreationForm):
             'password2',
         )
 
+

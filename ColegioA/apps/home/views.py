@@ -1,5 +1,6 @@
 from django.shortcuts import render
 from django.views.generic import TemplateView, CreateView
+from django.contrib.auth.views import LoginView
 from django.http import HttpResponseRedirect
 from django.urls import reverse_lazy
 from .models import Usuario
@@ -41,3 +42,6 @@ class RegistroUserView(CreateView):
     model = Usuario
     form_class = RegistroForm
     success_url = reverse_lazy('home:home')
+
+class LoginView(LoginView):
+    template_name = 'login.html'
