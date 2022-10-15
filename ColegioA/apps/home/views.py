@@ -2,7 +2,8 @@ from django.shortcuts import render
 from django.views.generic import TemplateView, CreateView
 from django.http import HttpResponseRedirect
 from django.urls import reverse_lazy
-from .forms import EstudianteForm
+from .models import Usuario
+from .forms import EstudianteForm, RegistroForm
 
 
 # Create your views here.
@@ -28,3 +29,9 @@ class ComentariosView(TemplateView):
 
 class AcercaView(TemplateView):
     template_name='about.html'
+
+
+class RegistroUserView(CreateView):
+    model = Usuario
+    form_class = RegistroForm
+    success_url = reverse_lazy('home:home')
