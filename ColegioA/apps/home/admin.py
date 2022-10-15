@@ -1,5 +1,5 @@
 from django.contrib import admin
-from .models import Estudiante, Curso, Telefono, Autorizador, Articulo, Comentario
+from .models import Estudiante, Curso, Telefono, Autorizador, Articulo, Comentario, Usuario
 
 # Register your models here.
 admin.site.register(Estudiante)
@@ -8,3 +8,4 @@ admin.site.register(Telefono)
 admin.site.register(Autorizador)
 admin.site.register(Articulo)
 admin.site.register(Comentario)
+admin.site.register(Usuario)
