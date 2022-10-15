@@ -51,12 +51,12 @@
                   <td>Nombre</td>
                   <td>Apellido</td>
                 </tr>
-                {% for est in object_list %}
+                {% for adm in object_list %}
                   <tr>
-                    <td> {{ est.id }} </td>
+                    <td> {{ adm.id }} </td>
                     <td><img class="profile-image" src="https://img1.freepng.es/20181110/spz/kisspng-computer-icons-login-scalable-vector-graphics-emai-5be73768cb2288.8298339815418796568321.jpg" alt="Profile Icon" width="35px" height="35px"></td>
-                    <td>{{ est.nombre }}</td>
-                    <td>{{ est.apellido }}</td>
+                    <td>{{ adm.nombre }}</td>
+                    <td>{{ adm.apellido }}</td>
                   </tr>
                 {% endfor %}
               </table>

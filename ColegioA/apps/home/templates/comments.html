@@ -11,7 +11,7 @@
             <p class="lead mb-4">En este apartado encontrará los comentarios realizados a las publicaciones hechas por estudiantes del curso de Desarrollo Web de la Universidad Mariano Gálvez, sede San Pedro, San Marcos.</p>
             
             
-            <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
+            <button type="button" class="btn btn-success" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
               Agregar Comentario
             </button>
             
@@ -61,6 +61,7 @@
                 </div>
                 <ul class="list-group list-group-flush text-start">
 
+                  {% for comentario in object_list %}
                   <li class="list-group-item small">
                     <div class="card mb-3 border border-primary" style="max-width: 540px;">
                       <div class="row g-0">
@@ -69,46 +70,15 @@
                         </div>
                         <div class="col-md-8">
                           <div class="card-body">
-                            <h5 class="card-title">Bob Sponja</h5>
-                            <p class="card-text">Es muy emocionante vivir en el fondo del mar 🤗🤩.</p>
-                            <p class="card-text"><small class="text-muted">12/09/2022 18:30</small></p>
+                            <h5 class="card-title"> {{ comentario.estudiante }} </h5>
+                            <p class="card-text">  {{ comentario.descripcion }} </p>
+                            <p class="card-text"><small class="text-muted"> {{ comentario.creacion }} </small></p>
                           </div>
                         </div>
                       </div>
                     </div>
                   </li>
-                  <li class="list-group-item small">
-                    <div class="card mb-3 border border-primary" style="max-width: 540px;">
-                      <div class="row g-0">
-                        <div class="col-md-2">
-                          <img src="https://pm1.narvii.com/6192/8d48b363926a12d577100ba2e5ef945c6327441b_128.jpg" class="img-fluid border border-success rounded-circle" alt="...">
-                        </div>
-                        <div class="col-md-8">
-                          <div class="card-body">
-                            <h5 class="card-title">Bob Sponja</h5>
-                            <p class="card-text">Es muy emocionante vivir en el fondo del mar 🤗🤩.</p>
-                            <p class="card-text"><small class="text-muted">12/09/2022 18:30</small></p>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </li>
-                  <li class="list-group-item small">
-                    <div class="card mb-3 border border-primary" style="max-width: 540px;">
-                      <div class="row g-0">
-                        <div class="col-md-2">
-                          <img src="https://pm1.narvii.com/6192/8d48b363926a12d577100ba2e5ef945c6327441b_128.jpg" class="img-fluid border border-success rounded-circle" alt="...">
-                        </div>
-                        <div class="col-md-8">
-                          <div class="card-body">
-                            <h5 class="card-title">Bob Sponja</h5>
-                            <p class="card-text">Es muy emocionante vivir en el fondo del mar 🤗🤩.</p>
-                            <p class="card-text"><small class="text-muted">12/09/2022 18:30</small></p>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </li>
+                  {% endfor %}
 
                 </ul>              
               </div>

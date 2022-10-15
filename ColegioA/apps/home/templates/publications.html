@@ -11,7 +11,7 @@
             <p class="lead mb-4">En este apartado encontrará las publicaciones hechas por estudiantes del curso de Desarrollo Web de la Universidad Mariano Gálvez, sede San Pedro, San Marcos.</p>
             
 
-            <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
+            <button type="button" class="btn btn-success" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
               Agregar Publicación
             </button>
             
@@ -51,32 +51,20 @@
             </div>
 
 
-            <div class="d-grid gap-2 d-sm-flex justify-content-sm-center mt-5 text-dark">
-              <div class="card">
-                <h5 class="card-header">Calamardo Tentáculos</h5>
-                <p class="card-text"><small class="text-muted">Publicada 12/09/2022 15:30</small></p>
-                <img src="https://p4.wallpaperbetter.com/wallpaper/414/654/483/fish-ocean-sea-sealife-wallpaper-preview.jpg" class="card-img-top" alt="...">
-                <div class="card-body">
-                  <h5 class="card-title">Vida en el fondo del mar</h5>
-                  <p class="card-text">Las maravillas del fondo marino se hacen ver a través del estudio de los oceanos</p>
-                  <a href="#" class="btn btn-primary">Autorizar</a>
+            {% for pub in object_list %}
+              <div class="d-grid gap-2 d-sm-flex justify-content-sm-center mt-5 text-dark">
+                <div class="card">
+                  <h5 class="card-header"> {{ pub.estudiante }} </h5>
+                  <p class="card-text"><small class="text-muted">Publicada {{ pub.creacion }} </small></p>
+                  <img src="https://p4.wallpaperbetter.com/wallpaper/414/654/483/fish-ocean-sea-sealife-wallpaper-preview.jpg" class="card-img-top" alt="...">
+                  <div class="card-body">
+                    <h5 class="card-title"> {{ pub.titulo }} </h5>
+                    <p class="card-text"> {{ pub.descripcion }} </p>
+                    <a href="#" class="btn btn-primary">Autorizar</a>
+                  </div>
                 </div>
               </div>
-            </div>
-
-            <div class="d-grid gap-2 d-sm-flex justify-content-sm-center mt-5 text-dark">
-              <div class="card">
-                <h5 class="card-header">Calamardo Tentáculos</h5>
-                <p class="card-text"><small class="text-muted">Publicada 12/09/2022 15:30</small></p>
-                <img src="https://p4.wallpaperbetter.com/wallpaper/414/654/483/fish-ocean-sea-sealife-wallpaper-preview.jpg" class="card-img-top" alt="...">
-                <div class="card-body">
-                  <h5 class="card-title">Vida en el fondo del mar</h5>
-                  <p class="card-text">Las maravillas del fondo marino se hacen ver a través del estudio de los oceanos</p>
-                  <a href="#" class="btn btn-primary">Autorizar</a>
-                </div>
-              </div>
-            </div>
-
+            {% endfor %}
 
           </div>
         </div>
