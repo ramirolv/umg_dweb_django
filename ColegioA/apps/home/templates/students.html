@@ -9,67 +9,12 @@
           <h1 class="display-5 fw-bold">Listado de Estudiantes</h1>
           <div class="col-lg-6 mx-auto">
             <p class="lead mb-4">Estudiantes del curso de Desarrollo Web de la Universidad Mariano Gálvez, sede San Pedro, San Marcos.</p>
-            <div class="d-grid gap-2 d-sm-flex justify-content-sm-center">
-              <table id="dataTable" class="table text-white">
-                      <tr>
-                          <td>No</td>
-                          <td>Perfil</td>
-                          <td>Nombre</td>
-                          <td>Promedio</td>
-                      </tr>
-                      <tr>
-                          <td>1</td>
-                          <td><img  class="profile-image" src="https://ih1.redbubble.net/image.488017796.0910/flat,128x128,075,f-pad,128x128,f8f8f8.u6.jpg" alt="Profile Icon" width="30px" height="30px"></td>
-                          <td>María Antonieta</td>
-                          <td>85</td>
-                      </tr>
-                      <tr>
-                          <td>2</td>
-                          <td><img class="profile-image" src="https://pbs.twimg.com/profile_images/2181101269/calamardo_189x189_1__reasonably_small.gif" alt="Profile Icon" width="35px" height="35px"></td>
-                          <td>Calamardo Tentáculos</td>
-                          <td>61</td>
-                      </tr>
-                      <tr>
-                          <td>3</td>
-                          <td><img class="profile-image" src="https://pm1.narvii.com/6192/8d48b363926a12d577100ba2e5ef945c6327441b_128.jpg" alt="Profile Icon" width="35px" height="35px"></td>
-                          <td>Bob Esponja</td>
-                          <td>82</td>
-                      </tr>
-                      <tr>
-                          <td>4</td>
-                          <td><img class="profile-image" src="data:image/jpeg;base64,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" alt="Profile Icon" width="35px" height="35px"></td>
-                          <td>Sheldon Cooper</td>
-                          <td>70</td>
-                      </tr>
-                      <tr>
-                          <td>5</td>
-                          <td><img class="profile-image" src="https://pm1.narvii.com/6259/ff4a4ac54bcf65aaacc9e93bd79730bc8b4f731d_128.jpg" alt="Profile Icon" width="35px" height="35px"></td>
-                          <td>Isaac Newton</td>
-                          <td>95</td>
-                        </tr>
-                        <tr>
-                          <td>6</td>
-                          <td><img class="profile-image" src="https://img1.freepng.es/20181110/spz/kisspng-computer-icons-login-scalable-vector-graphics-emai-5be73768cb2288.8298339815418796568321.jpg" alt="Profile Icon" width="35px" height="35px"></td>
-                          <td>Pedro Fuentes</td>
-                          <td>95</td>
-                      </tr>
-                      <tr>
-                          <td>7</td>
-                          <td><img class="profile-image" src="https://i.guim.co.uk/img/static/sys-images/Sport/Pix/pictures/2007/09/25/MikeTyson1.jpg?width=620&quality=85&fit=max&s=414036c68983fc0f341df34caf543b2c" alt="Profile Icon" width="35px" height="35px"></td>
-                          <td>Mike Tyson</td>
-                          <td>95</td>
-                      </tr>
-                      <tr>
-                          <td>8</td>
-                          <td><img class="profile-image" src="https://pbs.twimg.com/profile_images/728647055271337984/bXCXBbgK_400x400.jpg" alt="Profile Icon" width="35px" height="35px"></td>
-                          <td>Canelo Alvarez</td>
-                          <td>95</td>
-                      </tr>
-              </table>
-            </div>
-
+            
+            
+            
+            
             <div class="container">
-              <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
+              <button type="button" class="btn btn-success" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
                 Agregar Estudiante
               </button>
               
@@ -90,14 +35,15 @@
                           {% csrf_token %}
                           Nombre {{ form.nombre }}
                           <br>
+                          <br>
                           Apellido {{ form.apellido }}
+                          <br>
                           <br>
                           <input type="submit" class="btn btn-primary" name="Enviar">
                       </form>
                     </div>
                     <div class="modal-footer">
-                      <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                      <input type="submit" class="btn btn-primary" name="Enviar">
+                      <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
                     </div>
                   </div>
                 </div>
@@ -105,27 +51,29 @@
 
             </div>
 
-            <form class="row g-3 needs-validation" novalidate>
-              
-              
-              <button id="btnAgregar" type="button" class="col btn btn-success">Agregar</button>
-              <button id="btnGuardar" type="button" class="col btn btn-success col-5" style="display: none;">Guardar</button>
-              <button id="btnListar" type="button" class="col btn btn-primary offset-2 col-5" style="display: none;">Listar</button>
-              
-              
-              <div id="inputsData" style="display: none;">
-                <div class="input-group mb-3">
-                  <span class="input-group-text" id="basic-addon1">Perfil</span>
-                  <input id="inputPicture" type="text" class="form-control" placeholder="Link de imagen de perfil" aria-label="Username" aria-describedby="basic-addon1" required>
-                </div> 
-                <div class="input-group mb-3 col-md-4">
-                  <span class="input-group-text" id="basic-addon2">Nombre</span>
-                  <input id="inputName" type="text" class="form-control" placeholder="Escribe el nombre" aria-label="Username" aria-describedby="basic-addon2" required>
-                  <span class="input-group-text" id="basic-addon3">Promedio</span>
-                  <input id="inputAverage" type="number" min="0" max="100" class="form-control" placeholder="Escribe el promedio" aria-label="Username" aria-describedby="basic-addon3" required>
-                </div>
-              </div>
-            </form>
+
+
+
+
+            <div class="d-grid gap-2 d-sm-flex justify-content-sm-center">
+              <table id="dataTable" class="table text-white table-hover">
+                      <tr>
+                          <td>No</td>
+                          <td>Perfil</td>
+                          <td>Nombre</td>
+                          <td>Apellido</td>
+                      </tr>
+                      {% for est in object_list %}
+                        <tr>
+                          <td> {{ est.id }} </td>
+                          <td><img class="profile-image" src="https://img1.freepng.es/20181110/spz/kisspng-computer-icons-login-scalable-vector-graphics-emai-5be73768cb2288.8298339815418796568321.jpg" alt="Profile Icon" width="35px" height="35px"></td>
+                          <td>{{ est.nombre }}</td>
+                          <td>{{ est.apellido }}</td>
+                        </tr>
+                      {% endfor %}
+              </table>
+            </div>
+
 
           </div>
         </div>

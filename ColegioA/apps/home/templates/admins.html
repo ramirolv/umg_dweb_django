@@ -9,7 +9,7 @@
             <p class="lead mb-4">Aquí encontrarás el listado de administradores de la institución educativa.</p>
 
 
-            <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
+            <button type="button" class="btn btn-success" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
               Agregar Autorizador
             </button>
             
@@ -45,63 +45,23 @@
 
             <div class="d-grid gap-2 d-sm-flex justify-content-sm-center">
               <table id="dataTable" class="table text-white">
+                <tr>
+                  <td>No</td>
+                  <td>Perfil</td>
+                  <td>Nombre</td>
+                  <td>Apellido</td>
+                </tr>
+                {% for est in object_list %}
                   <tr>
-                      <td>No</td>
-                      <td>Perfil</td>
-                      <td>Nombre</td>
-                      <td>Puesto</td>
+                    <td> {{ est.id }} </td>
+                    <td><img class="profile-image" src="https://img1.freepng.es/20181110/spz/kisspng-computer-icons-login-scalable-vector-graphics-emai-5be73768cb2288.8298339815418796568321.jpg" alt="Profile Icon" width="35px" height="35px"></td>
+                    <td>{{ est.nombre }}</td>
+                    <td>{{ est.apellido }}</td>
                   </tr>
-                  <tr>
-                      <td>1</td>
-                      <td><img src="https://cdn-icons-png.flaticon.com/128/1177/1177568.png" alt="Profile Icon" width="30px" height="30px"></td>
-                      <td>Chuck Norris</td>
-                      <td>Director</td>
-                  </tr>
-                  <tr>
-                      <td>2</td>
-                      <td><img src="https://cdn-icons-png.flaticon.com/128/1177/1177568.png" alt="Profile Icon" width="30px" height="30px"></td>
-                      <td>Arnold Schwarzenegger</td>
-                      <td>Sub-Director</td>
-                  </tr>
-                  <tr>
-                      <td>3</td>
-                      <td><img src="https://cdn-icons-png.flaticon.com/128/1177/1177568.png" alt="Profile Icon" width="30px" height="30px"></td>
-                      <td>Jackie Chan</td>
-                      <td>Secretario</td>
-                  </tr>
-                  <tr>
-                      <td>4</td>
-                      <td><img src="https://cdn-icons-png.flaticon.com/128/1177/1177568.png" alt="Profile Icon" width="30px" height="30px"></td>
-                      <td>Brus Lee</td>
-                      <td>Mantenimiento</td>
-                  </tr>
-                  <tr>
-                      <td>5</td>
-                      <td><img src="https://cdn-icons-png.flaticon.com/128/1177/1177568.png" alt="Profile Icon" width="30px" height="30px"></td>
-                      <td>Chum Lee</td>
-                      <td>Secretaria</td>
-                  </tr>
+                {% endfor %}
               </table>
             </div>
-            <form class="row g-3 needs-validation" novalidate>
-              <button id="btnAgregar" type="button" class="col btn btn-success">Agregar</button>
-              <button id="btnGuardar" type="button" class="col btn btn-success col-5" style="display: none;">Guardar</button>
-              <button id="btnListar" type="button" class="col btn btn-primary offset-2 col-5" style="display: none;">Listar</button>
-              
-              
-              <div id="inputsData" style="display: none;">
-                <div class="input-group mb-3">
-                  <span class="input-group-text" id="basic-addon1">Perfil</span>
-                  <input id="inputPicture" type="text" class="form-control" placeholder="Link de imagen de perfil" aria-label="Username" aria-describedby="basic-addon1" required>
-                </div> 
-                <div class="input-group mb-3">
-                  <span class="input-group-text" id="basic-addon2">Nombre</span>
-                  <input id="inputName" type="text" class="form-control" placeholder="Escribe el nombre" aria-label="Username" aria-describedby="basic-addon2" required>
-                  <span class="input-group-text" id="basic-addon3">Puesto</span>
-                  <input id="inputAverage" type="text" class="form-control" placeholder="Escribe el puesto" aria-label="Username" aria-describedby="basic-addon3" required>
-                </div>
-              </div>
-            </form>
+            
           </div>
         </div>
 

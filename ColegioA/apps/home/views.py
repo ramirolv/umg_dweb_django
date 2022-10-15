@@ -1,9 +1,10 @@
+from re import template
 from django.shortcuts import render
-from django.views.generic import TemplateView, CreateView
+from django.views.generic import TemplateView, CreateView, ListView
 from django.contrib.auth.views import LoginView
 from django.http import HttpResponseRedirect
 from django.urls import reverse_lazy
-from .models import Usuario
+from .models import Autorizador, Usuario, Estudiante
 from .forms import ArticuloForm, AutorizadorForm, ComentarioForm, EstudianteForm, RegistroForm
 
 
@@ -11,28 +12,50 @@ from .forms import ArticuloForm, AutorizadorForm, ComentarioForm, EstudianteForm
 class HomeView(TemplateView):
     template_name='index.html'
 
-class EstudiantesView(CreateView):
+
+class EstudiantesView(CreateView, ListView):
     template_name='students.html'
     form_class = EstudianteForm
     success_url = reverse_lazy('home:home')
+    model = Estudiante
+
+    def get_query(self):
+        return Estudiante.objects.all()
+
+
+class ListarEstudianteView(ListView):
+    template_name = 'listarestudiante.html'
+    model = Estudiante
+
+    def get_query(self):
+        return Estudiante.objects.all()
+
 
 class CrearView(CreateView):
     template_name = 'crearEstudiante.html'
 
-class AdministradoresView(CreateView):
+
+class AdministradoresView(CreateView, ListView):
     template_name='admins.html'
     form_class = AutorizadorForm
     success_url = reverse_lazy('home:home')
+    model = Autorizador
+
+    def get_query(self):
+        return Estudiante.objects.all()
+
 
 class PublicacionesView(CreateView):
     template_name='publications.html'
     form_class = ArticuloForm
     success_url = reverse_lazy('home:home')
 
+
 class ComentariosView(CreateView):
     template_name='comments.html'
     form_class = ComentarioForm
     success_url = reverse_lazy('home:home')
+
 
 class AcercaView(TemplateView):
     template_name='about.html'
@@ -42,6 +65,7 @@ class RegistroUserView(CreateView):
     model = Usuario
     form_class = RegistroForm
     success_url = reverse_lazy('home:home')
+
 
 class LoginView(LoginView):
     template_name = 'login.html'
