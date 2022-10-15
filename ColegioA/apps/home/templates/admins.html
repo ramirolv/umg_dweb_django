@@ -7,6 +7,42 @@
           <h1 class="display-5 fw-bold">Listado de administradores</h1>
           <div class="col-lg-6 mx-auto">
             <p class="lead mb-4">Aquí encontrarás el listado de administradores de la institución educativa.</p>
+
+
+            <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
+              Agregar Autorizador
+            </button>
+            
+            <!-- Modal -->
+            <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+              <div class="modal-dialog modal-dialog-centered text-dark">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <h5 class="modal-title" id="staticBackdropLabel">Información del autorizador</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                  </div>
+                  <div class="modal-body">
+                    
+                    <h2>Crear Autorizador</h2>
+                    <form method="POST">
+                        {% csrf_token %}
+                        Nombre {{ form.nombre }}
+                        <br>
+                        <br>
+                        Apellido {{ form.apellido }}
+                        <br>
+                        <br>
+                        <input type="submit" class="btn btn-primary" name="Enviar">
+                    </form>
+                  </div>
+                  <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+
             <div class="d-grid gap-2 d-sm-flex justify-content-sm-center">
               <table id="dataTable" class="table text-white">
                   <tr>

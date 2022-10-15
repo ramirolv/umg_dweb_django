@@ -3,7 +3,7 @@ from django.views.generic import TemplateView, CreateView
 from django.http import HttpResponseRedirect
 from django.urls import reverse_lazy
 from .models import Usuario
-from .forms import EstudianteForm, RegistroForm
+from .forms import ArticuloForm, AutorizadorForm, ComentarioForm, EstudianteForm, RegistroForm
 
 
 # Create your views here.
@@ -18,14 +18,20 @@ class EstudiantesView(CreateView):
 class CrearView(CreateView):
     template_name = 'crearEstudiante.html'
 
-class AdministradoresView(TemplateView):
+class AdministradoresView(CreateView):
     template_name='admins.html'
+    form_class = AutorizadorForm
+    success_url = reverse_lazy('home:home')
 
-class PublicacionesView(TemplateView):
+class PublicacionesView(CreateView):
     template_name='publications.html'
+    form_class = ArticuloForm
+    success_url = reverse_lazy('home:home')
 
-class ComentariosView(TemplateView):
+class ComentariosView(CreateView):
     template_name='comments.html'
+    form_class = ComentarioForm
+    success_url = reverse_lazy('home:home')
 
 class AcercaView(TemplateView):
     template_name='about.html'

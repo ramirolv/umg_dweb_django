@@ -9,25 +9,47 @@
           <h1 class="display-5 fw-bold">Publicaciones de Estudiantes</h1>
           <div class="col-lg-6 mx-auto">
             <p class="lead mb-4">En este apartado encontrará las publicaciones hechas por estudiantes del curso de Desarrollo Web de la Universidad Mariano Gálvez, sede San Pedro, San Marcos.</p>
-            <form class="row g-3 needs-validation" novalidate>
-              <button id="btnAgregar" type="button" class="col btn btn-success">Agregar</button>
-              <button id="btnGuardar" type="button" class="col btn btn-success col-5" style="display: none;">Guardar</button>
-              <button id="btnListar" type="button" class="col btn btn-primary offset-2 col-5" style="display: none;">Listar</button>
-              
-              
-              <div id="inputsData" style="display: none;">
-                <div class="input-group mb-3">
-                  <span class="input-group-text" id="basic-addon1">Perfil</span>
-                  <input id="inputPicture" type="text" class="form-control" placeholder="Link de imagen de perfil" aria-label="Username" aria-describedby="basic-addon1" required>
-                </div> 
-                <div class="input-group mb-3 col-md-4">
-                  <span class="input-group-text" id="basic-addon2">Nombre</span>
-                  <input id="inputName" type="text" class="form-control" placeholder="Escribe el nombre" aria-label="Username" aria-describedby="basic-addon2" required>
-                  <span class="input-group-text" id="basic-addon3">Promedio</span>
-                  <input id="inputAverage" type="number" min="0" max="100" class="form-control" placeholder="Escribe el promedio" aria-label="Username" aria-describedby="basic-addon3" required>
+            
+
+            <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
+              Agregar Publicación
+            </button>
+            
+            <!-- Modal -->
+            <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+              <div class="modal-dialog modal-dialog-centered text-dark">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <h5 class="modal-title" id="staticBackdropLabel">Información de la publicación</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                  </div>
+                  <div class="modal-body">
+                    
+                    <h2>Crear Publicación</h2>
+                    <form method="POST">
+                        {% csrf_token %}
+                        Titulo {{ form.titulo }}
+                        <br>
+                        <br>
+                        Descripción {{ form.descripcion }}
+                        <br>
+                        <br>
+                        Estudiante {{ form.estudiante }}
+                        <br>
+                        <br>
+                        Autorizador {{ form.autorizador }}
+                        <br>
+                        <br>
+                        <input type="submit" class="btn btn-primary" name="Enviar">
+                    </form>
+                  </div>
+                  <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                  </div>
                 </div>
               </div>
-            </form>
+            </div>
+
 
             <div class="d-grid gap-2 d-sm-flex justify-content-sm-center mt-5 text-dark">
               <div class="card">
